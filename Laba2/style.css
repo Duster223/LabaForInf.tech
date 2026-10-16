@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;        /* тип шрифта */
+    background-color: #f4f6f8;              /* цвет фона */
+    color: #333;                            /* цвет текста */
+    margin: 0;
+    padding: 30px;
+}
+
+/* ===== Заголовок h1 ===== */
+h1 {
+    text-align: center;                     /* выравнивание по центру */
+    text-transform: uppercase;              /* верхний регистр */
+    color: #1a237e;                         /* тёмно-синий */
+    letter-spacing: 1px;                    /* расстояние между буквами */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* тень текста */
+    margin-bottom: 15px;
+}
+
+/* ===== Вступительный абзац ===== */
+.intro {
+    text-align: center;                     /* центрирование текста */
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;                       /* ограничение ширины */
+    margin: 0 auto 30px;                    /* горизонтальное центрирование */
+    line-height: 1.5;                       /* межстрочный интервал */
+}
+
+/* ===== Список сайтов ===== */
+.site-list {
+    max-width: 700px;
+    margin: 0 auto;                         /* центрирование блока */
+    padding: 20px 40px;
+    background-color: #ffffff;              /* белый фон */
+    border-radius: 15px;                    /* скругление углов */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* тень блока */
+    line-height: 1.8;
+}
+
+/* ===== Пункты списка ===== */
+.site-list li {
+    margin-bottom: 12px;                    /* отступ между пунктами */
+    font-size: 17px;
+}
+
+/* ===== Ссылки ===== */
+.site-list a {
+    color: #1a237e;                         /* цвет ссылки */
+    text-decoration: none;                  /* убираем подчёркивание */
+    font-weight: bold;
+    transition: color 0.3s;                 /* плавная смена цвета */
+}
+
+/* ===== Псевдокласс :hover — при наведении ===== */
+.site-list a:hover {
+    color: #e53935;                         /* красный при наведении */
+    text-decoration: underline;             /* подчёркивание при наведении */
+}
+
+/* ===== Описание сайта ===== */
+.desc {
+    color: #666;
+    font-size: 15px;
+    font-style: italic;
+}
