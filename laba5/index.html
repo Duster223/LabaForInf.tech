@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доступная карточка товара</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Каталог товаров</h1>
+
+        <!-- Область для объявлений скринридерам -->
+        <div aria-live="polite" class="visually-hidden" id="live-region"></div>
+
+        <!-- Карточка товара -->
+        <article class="card" aria-labelledby="product-title" aria-describedby="product-desc">
+            <!-- Декоративное изображение (скрыто от скринридеров) -->
+            <div class="card__image-wrapper">
+                <img src="images/images.jpg" alt="" aria-hidden="true" class="card__image">
+                <span class="card__badge" aria-hidden="true">Хит</span>
+            </div>
+
+            <!-- Контентная часть -->
+            <div class="card__content">
+                <h2 class="card__title" id="product-title">Беспроводные наушники</h2>
+                <p class="card__description" id="product-desc">
+                    Стильные беспроводные наушники с шумоподавлением и долгим временем автономной работы.
+                </p>
+
+                <!-- Цена с ARIA-меткой -->
+                <p class="card__price" aria-label="Цена товара: 7990 рублей">
+                    <span class="card__price-value">7 990 ₽</span>
+                </p>
+
+                <!-- Кнопка добавления в корзину -->
+                <button
+                    class="card__button button button--primary"
+                    type="button"
+                    aria-label="Добавить Беспроводные наушники в корзину"
+                    onclick="addToCart()"
+                >
+                    <span class="button__icon" aria-hidden="true">🛒</span>
+                    <span class="button__text">В корзину</span>
+                </button>
+
+                <!-- Ссылка "Подробнее" -->
+                <a href="#" class="card__link link" aria-label="Подробнее о Беспроводных наушниках">
+                    Подробнее
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        function addToCart() {
+            const liveRegion = document.getElementById('live-region');
+            liveRegion.textContent = 'Товар добавлен в корзину';
+
+            // Очистка через 3 секунды
+            setTimeout(() => {
+                liveRegion.textContent = '';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
